@@ -39,10 +39,7 @@ final class GameViewController: UIViewController {
     fileprivate var userStrategyO: UserStrategy?
     
     @IBOutlet fileprivate weak var gameBoardView: GameBoardView!
-    //@IBOutlet fileprivate weak var twoPlayerModeSwitch: UISwitch!
 }
-
-
 
 // MARK: - Gameplay
 
@@ -56,7 +53,7 @@ private extension GameViewController {
         
         let
         xStrategy = userStrategyX!,
-        oStrategy = userStrategyO! //?? createArtificialIntelligenceStrategy()
+        oStrategy = userStrategyO!
         
         game = Game(gameBoard: gameBoard, xStrategy: xStrategy, oStrategy: oStrategy)
         game!.startPlayingWithCompletionHandler { [weak self] outcome in

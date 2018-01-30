@@ -40,7 +40,7 @@
 		03DCD6DF1C0941030019BC48 /* TicTacToe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TicTacToe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DCD6E21C0941030019BC48 /* TicTacToe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TicTacToe.h; sourceTree = "<group>"; };
 		03DCD6E41C0941030019BC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03DCD6E91C0941030019BC48 /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03DCD6E91C0941030019BC48 /*  */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ""; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DCD6EE1C0941030019BC48 /* GameBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBoardTests.swift; sourceTree = "<group>"; };
 		03DCD6F01C0941030019BC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03DCD6F91C09414D0019BC48 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				03DCD6DF1C0941030019BC48 /* TicTacToe.framework */,
-				03DCD6E91C0941030019BC48 /* TicTacToeTests.xctest */,
+				03DCD6E91C0941030019BC48 /*  */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			);
 			name = TicTacToeTests;
 			productName = TicTacToeTests;
-			productReference = 03DCD6E91C0941030019BC48 /* TicTacToeTests.xctest */;
+			productReference = 03DCD6E91C0941030019BC48 /*  */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +198,7 @@
 				TargetAttributes = {
 					03DCD6DE1C0941030019BC48 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0920;
 					};
 					03DCD6E81C0941030019BC48 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -385,7 +385,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -403,7 +404,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = derekLeanplum.TicTacToe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

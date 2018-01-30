@@ -30,7 +30,7 @@ final class GameBoardView: UIView {
     
     var tappedEmptyPositionHandler: ((GameBoard.Position) -> Void)?
     
-    var tappedFinishedGameBoardHandler: ((Void) -> Void)?
+    var tappedFinishedGameBoardHandler: (() -> Void)?
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
