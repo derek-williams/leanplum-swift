@@ -39,7 +39,7 @@ final class GameViewController: UIViewController {
     fileprivate var userStrategyO: UserStrategy?
     
     @IBOutlet fileprivate weak var gameBoardView: GameBoardView!
-    @IBOutlet fileprivate weak var twoPlayerModeSwitch: UISwitch!
+    //@IBOutlet fileprivate weak var twoPlayerModeSwitch: UISwitch!
 }
 
 

@@ -9,11 +9,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Tic-tac-toe-->
         <scene sceneID="tne-QT-ifu">
@@ -29,47 +24,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-tw-vKY" customClass="GameBoardView" customModule="TicTacToeApp" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="64" width="383" height="603"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HHv-GE-cGZ">
-                                        <rect key="frame" x="82" y="564" width="219.5" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilf-TF-ZA6">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="31"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4QS-vN-Ov7">
-                                                <rect key="frame" x="82" y="0.0" width="51" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="awj-h8-s1Q"/>
-                                                    <constraint firstAttribute="width" constant="49" id="pI0-6L-Lwl"/>
-                                                </constraints>
-                                                <color key="onTintColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="awj-h8-s1Q"/>
-                                                        <exclude reference="pI0-6L-Lwl"/>
-                                                    </mask>
-                                                </variation>
-                                                <connections>
-                                                    <action selector="handleTwoPlayerModeSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="gGW-Um-9Rg"/>
-                                                </connections>
-                                            </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Two Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqZ-yi-WUs">
-                                                <rect key="frame" x="139" y="0.0" width="80.5" height="31"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="HHv-GE-cGZ" secondAttribute="bottom" constant="8" id="3ML-YK-6Yh"/>
-                                    <constraint firstItem="HHv-GE-cGZ" firstAttribute="centerX" secondItem="FGr-tw-vKY" secondAttribute="centerX" id="epS-LA-Uiq"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +45,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="gameBoardView" destination="FGr-tw-vKY" id="qjD-Co-0Ay"/>
-                        <outlet property="twoPlayerModeSwitch" destination="4QS-vN-Ov7" id="wZa-gB-2VR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
