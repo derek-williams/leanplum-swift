@@ -2,7 +2,7 @@
 //  RootViewController.swift
 //  TicTacToeApp
 //
-//  Created by Derek Williams on 1/10/18.
+//  Created by Derek Williams on 1/29/18.
 //  Copyright © 2018 derekLeanplum. All rights reserved.
 //
 
@@ -52,11 +52,11 @@ private extension GameViewController {
         gameBoardView.gameBoard = gameBoard
         
         userStrategyX = UserStrategy()
-        userStrategyO = twoPlayerModeSwitch.isOn ? UserStrategy() : nil
+        userStrategyO = UserStrategy()
         
         let
         xStrategy = userStrategyX!,
-        oStrategy = userStrategyO ?? createArtificialIntelligenceStrategy()
+        oStrategy = userStrategyO! //?? createArtificialIntelligenceStrategy()
         
         game = Game(gameBoard: gameBoard, xStrategy: xStrategy, oStrategy: oStrategy)
         game!.startPlayingWithCompletionHandler { [weak self] outcome in

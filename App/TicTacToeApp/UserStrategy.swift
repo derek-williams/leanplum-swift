@@ -2,7 +2,7 @@
 //  UserStrategy.swift
 //  TicTacToeApp
 //
-//  Created by Derek Williams on 1/19/18.
+//  Created by Derek Williams on 1/29/18.
 //  Copyright © 2018 derekLeanplum. All rights reserved.
 //
 

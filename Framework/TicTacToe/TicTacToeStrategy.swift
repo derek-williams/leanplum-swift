@@ -12,7 +12,3 @@ import Foundation
 public protocol TicTacToeStrategy {
     func choosePositionForMark(_ mark: Mark, onGameBoard gameBoard: GameBoard, completionHandler: @escaping (GameBoard.Position) -> Void)
 }
-
-public func createArtificialIntelligenceStrategy() -> TicTacToeStrategy {
-    return NewellAndSimonStrategy()
-}
