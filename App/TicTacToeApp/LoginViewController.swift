@@ -10,11 +10,14 @@ import Foundation
 import SpriteKit
 import Leanplum
 
-final class LoginViewController : UIViewController {
-    
-    override func viewDidLoad() {
+final class LoginViewController : UIViewController
+{
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     }
+    
+    @IBOutlet weak var userName: UITextField!
     
     @IBAction func login(sender: UIButton)
     {
@@ -22,8 +25,21 @@ final class LoginViewController : UIViewController {
         
         if(Leanplum.hasStarted())
         {
-            //Leanplum.setUserId()
+            print("leanplum has started")
+            if(userName.hasText && userName.text != "UserName")
+            {
+                print("username has text and it doesn't equal username")
+                Leanplum.setUserId(userName.text)
+                
+                //if the username exists it gets
+            }
+            else
+            {
+                print("username hasnt been set")
+                //userid will be
+            }
             performSegue(withIdentifier: "main", sender: sender)
+            userName.text = "UserName"
             print("Trying to change scenes")
         }
         else
