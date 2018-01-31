@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camo" translatesAutoresizingMaskIntoConstraints="NO" id="ghZ-qY-vrF">
+                                <rect key="frame" x="-453" y="-157" width="1280" height="980"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sI-8h-ba3" userLabel="loginButton">
                                 <rect key="frame" x="115" y="312" width="145" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -33,7 +37,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="login" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="loginWithSender:" destination="lKM-ow-nws" eventType="touchUpInside" id="nvt-v4-Bot"/>
+                                    <action selector="loginWithSender:" destination="lKM-ow-nws" eventType="touchUpInside" id="Mk4-iT-XBL"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UserName" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-PY-LmD">
@@ -46,13 +50,23 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="username" value=""/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u1-9C-20O">
+                                <rect key="frame" x="265" y="115" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.83524598940000006" green="0.82685161200000001" blue="0.84348688469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Change BG"/>
+                                <connections>
+                                    <action selector="changeBackgroundWithSender:" destination="lKM-ow-nws" eventType="touchUpInside" id="RUU-bQ-7ye"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="snY-U7-J0d"/>
                     <connections>
+                        <outlet property="background" destination="ghZ-qY-vrF" id="Jb9-qS-n7H"/>
                         <outlet property="userName" destination="lnL-PY-LmD" id="owC-8x-rIY"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="main" id="uik-YV-QeR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="main" id="VDF-0M-tMt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujI-kY-WLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -73,6 +87,40 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-tw-vKY" customClass="GameBoardView" customModule="TicTacToeApp" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="64" width="383" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKH-7r-J6c">
+                                        <rect key="frame" x="296" y="565" width="79" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Swap Title"/>
+                                        <connections>
+                                            <action selector="switchTitleWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bF0-j9-MWi"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Multiplier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKt-dn-R3P">
+                                        <rect key="frame" x="8" y="552" width="135" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUb-Vt-nhe">
+                                        <rect key="frame" x="151" y="543" width="108" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Pa-Fa-ZFl">
+                                        <rect key="frame" x="18" y="535" width="98" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Multiplier"/>
+                                        <connections>
+                                            <action selector="SwapDictionaryElementWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Ig-hR-HA5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -94,11 +142,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="gameBoardView" destination="FGr-tw-vKY" id="qjD-Co-0Ay"/>
+                        <outlet property="multiplierName" destination="bKt-dn-R3P" id="IsA-Ev-8EJ"/>
+                        <outlet property="multiplierValue" destination="aUb-Vt-nhe" id="1ZM-oQ-Wtd"/>
+                        <outlet property="titleBar" destination="zQS-qC-Hlf" id="sEa-Ya-Z82"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3030" y="659"/>
+            <point key="canvasLocation" x="3029.5999999999999" y="658.92053973013503"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KyD-7O-iUe">
@@ -119,4 +170,7 @@
             <point key="canvasLocation" x="911" y="659"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camo" width="1280" height="980"/>
+    </resources>
 </document>

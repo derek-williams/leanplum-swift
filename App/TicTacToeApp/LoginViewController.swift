@@ -17,7 +17,18 @@ final class LoginViewController : UIViewController
         super.viewDidLoad()
     }
     
+    
+    @IBOutlet weak var background: UIImageView!
+    
     @IBOutlet weak var userName: UITextField!
+    var space = LPVar.define("space", withFile: "center.png")
+    
+    @IBAction func changeBackground(sender: UIButton)
+    {
+        Leanplum.onVariablesChanged {
+                self.background.image = self.space?.imageValue()
+        }
+    }
     
     @IBAction func login(sender: UIButton)
     {
@@ -30,13 +41,15 @@ final class LoginViewController : UIViewController
             {
                 print("username has text and it doesn't equal username")
                 Leanplum.setUserId(userName.text)
+                Leanplum.track("Successful Login")
                 
                 //if the username exists it gets
             }
             else
             {
                 print("username hasnt been set")
-                //userid will be
+                //userid will be device
+                Leanplum.setUserId(Leanplum.deviceId())
             }
             performSegue(withIdentifier: "main", sender: sender)
             userName.text = "UserName"

@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				03464F081C1A9D720074451B /* TicTacToe.framework */,
-				03464F0A1C1A9D720074451B /*  */,
+				03464F0A1C1A9D720074451B /* TicTacToeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,10 +250,9 @@
 			remoteRef = 03464F071C1A9D720074451B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		03464F0A1C1A9D720074451B /*  */ = {
+		03464F0A1C1A9D720074451B /* TicTacToeTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			name = "";
 			path = TicTacToeTests.xctest;
 			remoteRef = 03464F091C1A9D720074451B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
