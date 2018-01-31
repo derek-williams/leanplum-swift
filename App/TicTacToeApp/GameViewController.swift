@@ -12,6 +12,11 @@ import TicTacToe
 /** The view controller that manages Tic-tac-toe gameplay. */
 final class GameViewController: UIViewController {
     
+    func login()
+    {
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
