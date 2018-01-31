@@ -8,14 +8,11 @@
 
 import UIKit
 import TicTacToe
+import SpriteKit
 
 /** The view controller that manages Tic-tac-toe gameplay. */
 final class GameViewController: UIViewController {
     
-    func login()
-    {
-
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +24,7 @@ final class GameViewController: UIViewController {
         gameBoardView.tappedFinishedGameBoardHandler = { [weak self] in
             self?.startPlayingGame()
         }
+        
         
         startPlayingGame()
     }

@@ -16,7 +16,7 @@ import Leanplum
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
-    func application(_ application: UIApplication!, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]!) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         // We've inserted your Test API keys here for you :)
         #if DEBUG
             Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
