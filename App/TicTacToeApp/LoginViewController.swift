@@ -42,6 +42,7 @@ final class LoginViewController : UIViewController
                 print("username has text and it doesn't equal username")
                 Leanplum.setUserId(userName.text)
                 Leanplum.track("Successful Login")
+                Leanplum.start(userAttributes: ["gender":"Male", "age": 24])
                 
                 //if the username exists it gets
             }
