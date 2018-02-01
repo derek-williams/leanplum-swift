@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We've inserted your Test API keys here for you :)
         #if DEBUG
             Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
-            Leanplum.setAppId("app_ShHntaRNFTz9r2TWsIYkuJQO8QCeWvIUQgMVmXzaG8A",
-                              withDevelopmentKey:"dev_wnp9e8ffxyBCYzuqq1K3Vn5evfkYkbKT4mOsTQCWmJ0")
+            Leanplum.setAppId("app_H91bpadV0q6DpBHmH9cshCdJsxVU3LQsQhBQTPAKAYk",
+                              withDevelopmentKey:"dev_DTkh2KbUEJdTxUGUTq1MsVhYnv9xzWs4jHK9etDNHFg")
         #else
-            Leanplum.setAppId("app_ShHntaRNFTz9r2TWsIYkuJQO8QCeWvIUQgMVmXzaG8A",
-                              withProductionKey: "prod_IHw2WscoFaTE1gLna9nFrigv7I9rBXZMfX1bILLMRRA")
+            Leanplum.setAppId("app_H91bpadV0q6DpBHmH9cshCdJsxVU3LQsQhBQTPAKAYk",
+                              withProductionKey: "prod_dC9VMUkMResITEboR4Y5iuHVOYn5s50UuQhi6Pgwgqo")
         #endif
         
         // Optional: Tracks in-app purchases automatically as the "Purchase" event.
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // LeanplumUIEditor.shared().allowInterfaceEditing()
         
         // Starts a new session and updates the app content from Leanplum.
-        Leanplum.start()
+        Leanplum.start(userAttributes: ["gender":"Male", "age": 24])
         
         return true
     }
